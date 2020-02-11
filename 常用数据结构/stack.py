@@ -4,8 +4,9 @@
 
 @Modify Time      @Author    @Version    @Description
 ------------      -------    --------    -----------
-2020/2/11 20:34   LiuHe      1.0         实现栈
+2020/2/11 20:34   LiuHe      1.0         实现数组栈和链表栈
 """
+from 常用数据结构 import LinkNode
 
 
 class ArrayStack(object):
@@ -40,3 +41,14 @@ class ArrayStack(object):
 
     def print_stack(self):
         pass
+
+
+class LinkStack(object):
+    """
+    链表栈实现
+        出栈
+        进栈
+        查看栈顶元素
+        打印栈
+        查看栈长度
+    """
