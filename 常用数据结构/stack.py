@@ -40,15 +40,43 @@ class ArrayStack(object):
             return self._data[-1]
 
     def print_stack(self):
-        pass
+        for i in reversed(self._data):
+            print(i)
 
 
 class LinkStack(object):
     """
     链表栈实现
-        出栈
         进栈
+        出栈
         查看栈顶元素
         打印栈
-        查看栈长度
     """
+    def __init__(self):
+        self._data = LinkNode.LinkNode
+
+    def push(self, data):
+        if self._data.is_empty():
+            print("当前栈空")
+        else:
+            self._data.insert(pos=0, value=data)
+
+    def pop(self):
+        if self._data.is_empty():
+            print("当前栈空")
+        else:
+            self._data.remove(pos=0)
+
+    def top(self):
+        if self._data.is_empty():
+            print("当前栈空")
+            return None
+        else:
+            return self._data._head.get_value()
+
+    def show(self):
+        if self._data.is_empty():
+            print("当前栈空")
+        else:
+            self._data.show()
+
